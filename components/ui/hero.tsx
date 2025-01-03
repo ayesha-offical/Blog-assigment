@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Blogpage from "../blog/page";
+import Blogpage from "../../app/blog/page";
 
 import Link from "next/link";
 const Hero = () => {

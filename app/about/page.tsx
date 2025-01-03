@@ -83,7 +83,7 @@ const AboutPage = () => {
       <section className="mt-16 text-center">
         <h2 className="text-3xl font-semibold mb-6">Get in Touch</h2>
         <p className="text-xl text-gray-600 mb-8">
-          Have questions or want to collaborate? We'd love to hear from you.
+          Have questions or want to collaborate? We d love to hear from you.
         </p>
         <button className="bg-[#5a47ab] text-white px-8 py-3 rounded-lg hover:bg-[#D05270] transition-colors">
           Contact Us

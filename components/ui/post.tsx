@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { useState } from "react";
+import { Button } from '@/components/ui/button';
 
 interface Postdata {
     id?: number;
@@ -16,12 +17,12 @@ const Post = (props:Postdata) => {
   const [comments, setComments] = useState<string[]>([]);
   const [newComment, setNewComment] = useState<string>("");
 
-  const handleCommentSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-    e.preventDefault();
-    setComments([...comments, newComment]);
-    setNewComment("");
+  const handleCommentSubmit = ()=> {
+    if (newComment.trim()) {
+      setComments([...comments, newComment]);
+      setNewComment("");
   };
-
+  }
   return (
     <div className="flex bg-[#F8F9FA]  justify-center items-center">
     
@@ -52,24 +53,26 @@ const Post = (props:Postdata) => {
             ))}
           </ul>
         ) : (
-          <p className="text-slate-600">Let's Comment down.......... </p>
+          <p className="text-slate-600">Lets Comment down.......... </p>
         )}
         <div className="mt-6">
           <textarea
             className="w-full p-4 border text-lg border-purple-300 rounded-lg font-raleway font-medium "
-            rows={5}
+            rows={4}
             placeholder="Write your comment..."
             value={newComment}
             onChange={(change) => setNewComment(change.target.value)}
           ></textarea>
-          <button
-            className="mt-4 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500  text-white rounded-lg  "
-            onClick={handleCommentSubmit}
-          >
-            Add Comment
-          </button>
+         <Button
+    className="mt-4 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-lg"
+    onClick={handleCommentSubmit}
+>
+    Add Comment
+</Button>
+
         </div>
       </div>
+
 
         </div>
       

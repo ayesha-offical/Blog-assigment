@@ -1,5 +1,5 @@
 import Blogpostdata from "@/app/blogdata/postdata2";
-import Post from "@/app/component/post";
+import Post from "@/components/ui/post";
 import { notFound } from "next/navigation";
 
 export default async function Page({
