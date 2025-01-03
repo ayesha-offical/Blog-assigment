@@ -28,7 +28,7 @@ const Hero = () => {
         </button>
       </div>
 
-      <div className=" w-screen llg:h-screen md:w-1/2 flex justify-center items-center">
+      <div className="w-1/2 flex justify-center items-center">
         <div className=" hidden llg:flex items-center justify-end ">
           <Image src="/Heropic.svg" alt="image" width={408} height={407} />
         </div>
